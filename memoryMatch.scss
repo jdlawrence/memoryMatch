@@ -1,0 +1,29 @@
+.mm {
+  font-size: 22px;
+
+  &__container {
+    border: 6px solid black;
+    display: inline-block;
+  }
+
+  &__row {
+    display: flex;
+    margin-top: 3px;
+
+    &--bottom-row {
+      margin-bottom: 3px;
+    }
+  }
+
+  &__square {
+    background-color: blue;
+    border: 5px solid black;
+    height: 100px;
+    width: 100px;
+    margin: 0 3px 0 0;
+
+    &:first-of-type {
+      margin-left: 3px;
+    }
+  }
+}

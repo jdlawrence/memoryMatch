@@ -1,0 +1,26 @@
+.mm {
+  font-size: 22px;
+}
+.mm__container {
+  border: 6px solid black;
+  display: inline-block;
+}
+.mm__row {
+  display: flex;
+  margin-top: 3px;
+}
+.mm__row--bottom-row {
+  margin-bottom: 3px;
+}
+.mm__square {
+  background-color: blue;
+  border: 5px solid black;
+  height: 100px;
+  width: 100px;
+  margin: 0 3px 0 0;
+}
+.mm__square:first-of-type {
+  margin-left: 3px;
+}
+
+/*# sourceMappingURL=memoryMatch.css.map */
