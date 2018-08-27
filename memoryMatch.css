@@ -1,4 +1,4 @@
-.mm {
+.mm__header {
   font-size: 24px;
 }
 .mm__container {
@@ -41,6 +41,10 @@
 }
 .mm__square:first-of-type {
   margin-left: 3px;
+}
+.mm__reset {
+  display: block;
+  margin-top: 10px;
 }
 
 /*# sourceMappingURL=memoryMatch.css.map */

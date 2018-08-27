@@ -1,5 +1,8 @@
 .mm {
-  font-size: 24px;
+
+  &__header {
+    font-size: 24px;
+  }
 
   &__container {
     border: 6px solid black;
@@ -51,5 +54,10 @@
     &:first-of-type {
       margin-left: 3px;
     }
+  }
+
+  &__reset {
+    display: block;
+    margin-top: 10px;
   }
 }
