@@ -5,6 +5,9 @@
   border: 6px solid black;
   display: inline-block;
 }
+.mm__container--no-match {
+  border-color: red;
+}
 .mm__row {
   display: flex;
   margin-top: 3px;
@@ -29,6 +32,12 @@
 }
 .mm__square--open:hover {
   background-color: red;
+}
+.mm__square--matched {
+  background-color: purple;
+}
+.mm__square--matched:hover {
+  background-color: purple;
 }
 .mm__square:first-of-type {
   margin-left: 3px;

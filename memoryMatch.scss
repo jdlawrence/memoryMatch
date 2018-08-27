@@ -4,6 +4,10 @@
   &__container {
     border: 6px solid black;
     display: inline-block;
+
+    &--no-match {
+      border-color: red;
+    }
   }
 
   &__row {
@@ -33,6 +37,14 @@
 
       &:hover {
         background-color: red;
+      }
+    }
+
+    &--matched {
+      background-color: purple;
+
+      &:hover {
+        background-color: purple;
       }
     }
 
