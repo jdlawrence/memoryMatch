@@ -1,5 +1,5 @@
 .mm {
-  font-size: 22px;
+  font-size: 24px;
 }
 .mm__container {
   border: 6px solid black;
@@ -16,8 +16,19 @@
   background-color: blue;
   border: 5px solid black;
   height: 100px;
+  line-height: 100px;
+  text-align: center;
   width: 100px;
   margin: 0 3px 0 0;
+}
+.mm__square:hover {
+  background-color: orange;
+}
+.mm__square--open {
+  background-color: red;
+}
+.mm__square--open:hover {
+  background-color: red;
 }
 .mm__square:first-of-type {
   margin-left: 3px;
