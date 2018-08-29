@@ -63,7 +63,9 @@ document.addEventListener("DOMContentLoaded", function() {
             // Increase the amount of matches and reset numActive
             numMatches++;
             if (numMatches === 4) {
-              alert('You won the game!!');
+              setTimeout(() => {
+                alert('You won the game!!');
+              }, 1);
             }
 
           } else {
