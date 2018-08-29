@@ -46,5 +46,12 @@
   display: block;
   margin-top: 10px;
 }
+.mm__timer-label {
+  margin-top: 10px;
+  display: none;
+}
+.mm__timer-label--visible {
+  display: block;
+}
 
 /*# sourceMappingURL=memoryMatch.css.map */

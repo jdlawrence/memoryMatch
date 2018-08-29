@@ -4,15 +4,35 @@ let numActive = 0;
 let numMatches = 0;
 let firstVal = null;
 let firstIndex = null;
+let gameStarted = false;
+let timerIntervalID = null;
+let timerEl = '';
+let timerValEl = ''
+
 
 document.addEventListener("DOMContentLoaded", function() {
   // this function runs when the DOM is ready, i.e. when the document has been parsed
+  timerValEl = document.getElementsByClassName('mm__timer-val').item(0);
   const squares = resetGame();
 
   squares.forEach((squareEl, index) => {
 
     squareEl.addEventListener('click', () => {
 
+      if (!gameStarted) {
+        gameStarted = true;
+
+        // Add the time when the game starts
+        timerEl = document.getElementsByClassName('mm__timer-label').item(0);
+        timerEl.classList.add('mm__timer-label--visible');
+        let startTime = Date.now();
+
+        timerIntervalID = setInterval(() => {
+          let now = Date.now();
+          timerValEl.innerHTML = `${Math.floor((now - startTime) / 1000)}`;
+        }, 1000);
+
+      }
       if (numMatches < 4) {
 
         // If the square is covered and there are not already two active,
@@ -29,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function() {
           const firstSquare = document.getElementsByClassName('mm__square').item(firstIndex);
 
           if (board[index].val === firstVal) {
-            console.log('a match!!');
             // Mark both cells with matched class
             firstSquare.classList.add('mm__square--matched');
             squareEl.classList.add('mm__square--matched');
@@ -104,6 +123,13 @@ const resetGame = () => {
   numMatches = 0;
   firstVal = null;
   firstIndex = null;
+  gameStarted = false;
+  clearInterval(timerIntervalID);
+
+  if (timerEl) {
+    timerEl.classList.remove('mm__timer-label--visible');
+    timerValEl.innerHTML = '0';
+  }
 
   console.log('vals', board);
   return squares;
